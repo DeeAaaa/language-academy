@@ -76,7 +76,7 @@ export default function Resources() {
         <p className="text-gray-500 dark:text-gray-400 text-center text-lg mb-12">Watch videos, read articles, and take fun quizzes!</p>
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden">
-            <div className="bg-gray-100 dark:bg-gray-700 p-2"><video className="w-full h-64 rounded-xl object-cover bg-black" controls src="/Mike.mp4" /></div>
+            <div className="bg-gray-100 dark:bg-gray-700 p-2"><video className="w-full h-64 rounded-xl object-cover bg-black" controls src="/language-academy/Mike.mp4" /></div>
             <div className="p-6"><span className="bg-green-100 dark:bg-green-900 text-green-600 text-xs px-3 py-1 rounded-full font-medium">Self-Hosted</span><h3 className="text-xl font-bold text-gray-900 dark:text-white mt-3">Short Welcome Video</h3><p className="text-gray-500 dark:text-gray-400 mt-2">A quick look at our academy.</p></div>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden">

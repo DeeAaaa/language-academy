@@ -6,37 +6,39 @@ export const metadata = {
   description: 'Online and offline language teaching for young learners',
 }
 
-export default function RootLayout({ children }) {
+const base = "/language-academy"
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
         <AppWrapper>
           <nav className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-40">
             <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
-              <a href="/" className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Language Academy</a>
+              <a href={base + "/"} className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Language Academy</a>
               <div className="hidden md:flex items-center gap-6">
-                <a href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Home</a>
-                <a href="/curriculum" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Curriculum</a>
-                <a href="/resources" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Resources</a>
-                <a href="/video-room" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Video Room</a>
-                <a href="/calendar" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Calendar</a>
-                <a href="/flashcards" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Flashcards</a>
-                <a href="/dashboard" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Dashboard</a>
-                <a href="/register" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2 rounded-full font-medium hover:shadow-lg transition text-sm">Sign Up</a>
+                <a href={base + "/"} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Home</a>
+                <a href={base + "/curriculum"} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Curriculum</a>
+                <a href={base + "/resources"} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Resources</a>
+                <a href={base + "/video-room"} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Video Room</a>
+                <a href={base + "/calendar"} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Calendar</a>
+                <a href={base + "/flashcards"} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Flashcards</a>
+                <a href={base + "/dashboard"} className="text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Dashboard</a>
+                <a href={base + "/register"} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2 rounded-full font-medium hover:shadow-lg transition text-sm">Sign Up</a>
               </div>
               <details className="md:hidden relative">
                 <summary className="list-none text-gray-600 dark:text-gray-300 cursor-pointer p-1">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
                 </summary>
                 <div className="absolute top-full right-0 w-56 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl shadow-lg mt-2 p-4 space-y-2 z-50">
-                  <a href="/" className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Home</a>
-                  <a href="/curriculum" className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Curriculum</a>
-                  <a href="/resources" className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Resources</a>
-                  <a href="/video-room" className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Video Room</a>
-                  <a href="/calendar" className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Calendar</a>
-                  <a href="/flashcards" className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Flashcards</a>
-                  <a href="/dashboard" className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Dashboard</a>
-                  <a href="/register" className="block mt-2 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-full font-medium">Sign Up</a>
+                  <a href={base + "/"} className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Home</a>
+                  <a href={base + "/curriculum"} className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Curriculum</a>
+                  <a href={base + "/resources"} className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Resources</a>
+                  <a href={base + "/video-room"} className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Video Room</a>
+                  <a href={base + "/calendar"} className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Calendar</a>
+                  <a href={base + "/flashcards"} className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Flashcards</a>
+                  <a href={base + "/dashboard"} className="block py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 font-medium">Dashboard</a>
+                  <a href={base + "/register"} className="block mt-2 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-full font-medium">Sign Up</a>
                 </div>
               </details>
             </div>
@@ -53,10 +55,10 @@ export default function RootLayout({ children }) {
               <div>
                 <h4 className="font-bold mb-4">Quick Links</h4>
                 <div className="flex flex-col gap-2 text-gray-400">
-                  <a href="/" className="hover:text-white">Home</a>
-                  <a href="/curriculum" className="hover:text-white">Curriculum</a>
-                  <a href="/video-room" className="hover:text-white">Video Room</a>
-                  <a href="/register" className="hover:text-white">Register</a>
+                  <a href={base + "/"} className="hover:text-white">Home</a>
+                  <a href={base + "/curriculum"} className="hover:text-white">Curriculum</a>
+                  <a href={base + "/video-room"} className="hover:text-white">Video Room</a>
+                  <a href={base + "/register"} className="hover:text-white">Register</a>
                 </div>
               </div>
               <div>
