@@ -1,0 +1,1 @@
+const { createClient } = require('@supabase/supabase-js/compat/entrypoint'); const db = createClient('https://hjbzwbgbqpqjunudeght.supabase.co', 'sb_publishable_fDr4CW_8nUUDrWFlDDoHTQ_xJyueNER'); db.from('users').select('*').then(r => Write-Host (r.data ? JSON.stringify(r.data, null, 2) : 'ERROR: ' + e.message)
